@@ -1,8 +1,8 @@
 def push_to_stack(item):
-    Stack=[]
-    Stack.append(item)
-    return Stack
+    # Stack=[]
+    # Stack.append(item)
+    return item
 
-s1= push_to_stack(10)
-print(s1)
+# s1= push_to_stack(10)
+# print(s1)
 
