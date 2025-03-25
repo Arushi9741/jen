@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('git clone'){
             steps{
-                git credentialsId : "todaytoken" , url "https://github.com/Arushi9741/jen.git" . branch : "main"
+                git credentialsId : "todaytoken" , url "https://github.com/Arushi9741/jen.git" .branch : "main"
             }
         }
 
