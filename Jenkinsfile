@@ -23,20 +23,20 @@ pipeline{
             steps{
 
                 echo "testing stage"
-                bat ' ' '
+                bat " " "
                 call venv\\Scripts\\active
                 pytest test.py
-                ' ' '
+                " " "
             }
         }
         stage('deploy'){
             steps{
 
                 echo "deployment"
-                bat ' ' '
+                bat " " "
                 call venv\\Scripts\\active
                 python stack.py
-                ' ' '
+                " " "
             }
         }
     }
