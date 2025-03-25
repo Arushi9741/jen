@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('git clone'){
             steps{
-                git credentialsId : "todaytoken" , url : "https://github.com/Arushi9741/jen.git" , branch : "main"
+                git credentialsId : 'todaytoken', url : 'https://github.com/Arushi9741/jen.git', branch : 'main'
             }
         }
 
@@ -13,7 +13,7 @@ pipeline{
                 echo "dependent file"
                 bat " " "
                 python -m venv venv
-                call venv\\Scripts\\active
+                call venv\\Scripts\\activate
                 python -m pip install --upgrade pip
                 pip install pytest
                 " " "
@@ -24,7 +24,7 @@ pipeline{
 
                 echo "testing stage"
                 bat " " "
-                call venv\\Scripts\\active
+                call venv\\Scripts\\activate
                 pytest test.py
                 " " "
             }
@@ -34,7 +34,7 @@ pipeline{
 
                 echo "deployment"
                 bat " " "
-                call venv\\Scripts\\active
+                call venv\\Scripts\\activate
                 python stack.py
                 " " "
             }
