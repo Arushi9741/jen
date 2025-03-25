@@ -11,12 +11,12 @@ pipeline{
             steps{
 
                 echo "dependent file"
-                bat ' ' '
+                bat " " "
                 python -m venv venv
                 call venv\\Scripts\\active
                 python -m pip install --upgrade pip
                 pip install pytest
-                ' ' '
+                " " "
             }
         }
         stage('test'){
