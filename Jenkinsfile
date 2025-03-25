@@ -11,32 +11,32 @@ pipeline{
             steps{
 
                 echo "dependent file"
-                bat " " "
+                bat '''
                 python -m venv venv
                 call venv\\Scripts\\activate
                 python -m pip install --upgrade pip
                 pip install pytest
-                " " "
+                '''
             }
         }
         stage('test'){
             steps{
 
                 echo "testing stage"
-                bat " " "
+                bat '''
                 call venv\\Scripts\\activate
                 pytest test.py
-                " " "
+                '''
             }
         }
         stage('deploy'){
             steps{
 
                 echo "deployment"
-                bat " " "
+                bat '''
                 call venv\\Scripts\\activate
                 python stack.py
-                " " "
+                '''
             }
         }
     }
