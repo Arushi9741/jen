@@ -1,7 +1,3 @@
-Stack = []
-def push(num):
-    Stack.append(num)
+def ad(a,b):
+    return a+b
 
-push(10)
-push(20)
-push(30)

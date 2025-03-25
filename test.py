@@ -1,4 +1,5 @@
-from stack import Stack
+from stack import add
 
 def test_case():
-    assert len(Stack) == 3
+    assert (add(2,3)) == 5
+
