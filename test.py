@@ -1,5 +1,5 @@
-from stack import add
+from stack import push_to_stack
 
 def test_case():
-    assert (add(2,3)) == 5
+    assert (push_to_stack()) == 1
 
